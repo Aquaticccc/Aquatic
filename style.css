@@ -157,3 +157,22 @@ body {
     color: rgb(0, 0, 0);            /* Mengubah warna teks link menjadi putih */
     text-decoration: none;   /* Menghapus garis bawah pada link (opsional) */
 }
+
+.hero {
+    /* Pastikan kontainer memiliki lebar penuh */
+    width: 100%;
+    overflow: hidden; /* Menyembunyikan bagian gambar yang keluar dari kontainer */
+}
+
+.content {
+    /* Mengatur posisi konten jika diperlukan */
+    text-align: center; /* Misalnya, untuk meratakan gambar */
+}
+
+.Baju3 {
+    /* Gambar responsif */
+    width: 100%; /* Menyesuaikan lebar dengan kontainer */
+    height: auto; /* Mempertahankan aspek rasio */
+    display: block; /* Menghindari ruang di bawah gambar */
+}
+
