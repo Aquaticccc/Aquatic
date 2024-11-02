@@ -1,4 +1,4 @@
-window.requestAnimationFrame =
+window.requestAnimationFrame = 
     window.__requestAnimationFrame ||
     window.requestAnimationFrame ||
     window.webkitRequestAnimationFrame ||
@@ -18,6 +18,7 @@ window.requestAnimationFrame =
         };
     })();
 
+// Mendeteksi apakah perangkat adalah mobile
 window.isDevice = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(((navigator.userAgent || navigator.vendor || window.opera)).toLowerCase()));
 var loaded = false;
 
@@ -25,7 +26,7 @@ var init = function () {
     if (loaded) return;
     loaded = true;
     var mobile = window.isDevice;
-    var koef = mobile ? 0.5 : 1;
+    var koef = mobile ? 0.5 : 1; // Menyesuaikan skala untuk perangkat mobile atau desktop
     var canvas = document.getElementById('heart');
     var ctx = canvas.getContext('2d');
     var width = canvas.width = koef * innerWidth;
@@ -50,7 +51,7 @@ var init = function () {
     ctx.fillRect(0, 0, width, height);
     drawHeader();
 
-    // Fungsi animasi
+    // Fungsi animasi jantung
     var heartPosition = function (rad) {
         return [Math.pow(Math.sin(rad), 3), -(15 * Math.cos(rad) - 5 * Math.cos(2 * rad) - 2 * Math.cos(3 * rad) - Math.cos(4 * rad))];
     };
@@ -172,6 +173,7 @@ var init = function () {
     });
 };
 
+// Memulai animasi ketika halaman siap
 var s = document.readyState;
 if (s === 'complete' || s === 'loaded' || s === 'interactive') init();
 else document.addEventListener('DOMContentLoaded', init, false);
