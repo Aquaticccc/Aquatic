@@ -32,22 +32,22 @@ var init = function () {
     var width = canvas.width = koef * innerWidth;
     var height = canvas.height = koef * innerHeight;
 
-    // Koordinat untuk area teks "aquatic"
+    // Menyesuaikan posisi teks "AQUATIC" agar selalu berada di tengah
     var textX = width / 2;
-    var textY = 320;
-    var textWidth = 100;  // Perkiraan lebar teks "aquatic"
-    var textHeight = 30;  // Perkiraan tinggi teks
+    var textY = height / 2;
+    var textWidth = 150; // Lebar teks "AQUATIC"
+    var textHeight = 50; // Tinggi teks
 
-    // Fungsi untuk menggambar teks "aquatic"
+    // Fungsi untuk menggambar teks "AQUATIC" di tengah
     var drawHeader = function() {
-        ctx.font = "bold 35px Playfair Display";
+        ctx.font = "bold " + (mobile ? 24 : 35) + "px Playfair Display";
         ctx.fillStyle = "rgba(255, 255, 255, 0.1)";
         ctx.textAlign = "center";
         ctx.fillText("AQUATIC", textX, textY);
     };
 
     // Inisialisasi awal
-    ctx.fillStyle = "rgba(0,0,0,1)";
+    ctx.fillStyle = "rgba(0,0,0,1)"; // Latar belakang hitam
     ctx.fillRect(0, 0, width, height);
     drawHeader();
 
@@ -62,6 +62,8 @@ var init = function () {
     window.addEventListener('resize', function () {
         width = canvas.width = koef * innerWidth;
         height = canvas.height = koef * innerHeight;
+        textX = width / 2;
+        textY = height / 2;
         ctx.fillStyle = "rgba(0,0,0,1)";
         ctx.fillRect(0, 0, width, height);
         drawHeader();
@@ -97,7 +99,7 @@ var init = function () {
             q: ~~(Math.random() * heartPointsCount),
             D: 2 * (i % 2) - 1,
             force: 0.2 * Math.random() + 0.7,
-            f: "hsla(0," + ~~(40 * Math.random() + 60) + "%," + ~~(60 * Math.random() + 20) + "%,.3)",
+            f: "hsla(0, 0%, 80%, 0.3)", // Warna abu-abu untuk jantung
             trace: []
         };
         for (var k = 0; k < traceCount; k++) e[i].trace[k] = {x: x, y: y};
@@ -150,7 +152,7 @@ var init = function () {
                 N.x -= config.traceK * (N.x - T.x);
                 N.y -= config.traceK * (N.y - T.y);
             }
-            ctx.fillStyle = u.f;
+            ctx.fillStyle = u.f; // Menggunakan warna abu-abu untuk jantung
             for (k = 0; k < u.trace.length; k++) {
                 ctx.fillRect(u.trace[k].x, u.trace[k].y, 1, 1);
             }
@@ -159,15 +161,15 @@ var init = function () {
     };
     loop();
 
-    // Event listener untuk mendeteksi klik pada teks "aquatic"
+    // Event listener untuk mendeteksi klik pada teks "AQUATIC" di tengah
     canvas.addEventListener('click', function(event) {
         var rect = canvas.getBoundingClientRect();
         var x = event.clientX - rect.left;
         var y = event.clientY - rect.top;
 
-        // Memeriksa apakah klik berada di area teks "aquatic"
+        // Memeriksa apakah klik berada di area teks "AQUATIC"
         if (x > textX - textWidth / 2 && x < textX + textWidth / 2 &&
-            y > textY - textHeight && y < textY) {
+            y > textY - textHeight / 2 && y < textY + textHeight / 2) {
             window.location.href = 'Home.html'; // Ganti dengan URL tujuan
         }
     });
