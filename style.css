@@ -5,15 +5,26 @@
     box-sizing: border-box;
 }
 
-body {
+    body {
         font-family: Arial, sans-serif;
         background-image: url('WhatsApp Image 2024-10-30 at 23.17.54.jpeg');
         background-size: cover; /* Mengisi seluruh layar */
         background-position: center; /* Mengatur posisi gambar di tengah */
         background-attachment: fixed; /* Membuat gambar tetap saat di-scroll */
         color: #333;
-        text-decoration: none;
-}
+        margin: 0; /* Menghilangkan margin default */
+        min-height: 100vh; /* Memastikan body selalu minimal setinggi viewport */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    @media (max-width: 768px) {
+        body {
+            background-size: contain; /* Agar lebih sesuai di perangkat kecil */
+            background-attachment: scroll; /* Membuat gambar bergerak di layar kecil */
+        }
+    }
 
 .container {
     width: 90%;       /* Lebar 90% dari layar */
