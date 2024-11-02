@@ -1,0 +1,103 @@
+/* Gaya Dasar */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+h1, h2, h3 {
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* Bagian Tentang Kami */
+.about {
+    padding: 20px;
+    background-color: #f0f9ff;
+    text-align: center;
+}
+
+/* Bagian Misi dan Visi */
+.mission-vision {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #e0f2f1;
+}
+
+.mission, .vision {
+    width: 45%;
+    padding: 10px;
+}
+
+/* Kontak Kami */
+.contact {
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-buttons {
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.instagram {
+    background-color: #E1306C; /* Warna khas Instagram */
+}
+
+.whatsapp {
+    background-color: #25D366; /* Warna khas WhatsApp */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Tombol Home */
+.Home {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.Home:hover {
+    background-color: #fffdfd; /* Ubah warna saat di-hover */
+    text-decoration: underline;
+}
+
+a {
+    color: #f4f4f9;
+    text-decoration: none; 
+}

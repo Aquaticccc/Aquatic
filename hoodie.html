@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQUATIC STORE</title>
+    <link rel="stylesheet" href="testing.css">
+</head>
+<body>
+    <header>
+        <h1>AQUATIC STORE</h1>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="testing.html">T-Shirt</a></li>
+                <li><a href="Us.html">Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>HOODIE AQUATIC STORE!</h2>
+        <p>Temukan berbagai macam hoodie untuk semua kalangan.</p>
+    </section>
+
+    <section id="produk">
+        <h2>Produk Kami</h2>
+        <div class="produk-item">
+            <img src="WhatsApp Image 2024-10-31 at 13.59.45_69524285.jpg" alt="Baju1" class="Baju1">
+            <a href="Hoodie Aquatic One.html" class="satu"; >Hoodie Aquatic One </a>
+            <p>Oversize </p>
+            <p>Price: Rp299.000</p>
+            <button class="buy-now-btn" onclick="orderWhatsApp()">Buy Now</button>
+        </div>
+        <img src="WhatsApp Image 2024-10-31 at 14.17.05_ca6a4584.jpg" alt="Baju2" class="Baju2">
+        </div>
+        <!-- Tambahkan lebih banyak produk sesuai kebutuhan -->
+    </section>
+    <script>
+        function orderWhatsApp() {
+            const phoneNumber = "6282211614257"; // Ganti dengan nomor WhatsApp Anda
+            const message = "Halo, saya ingin membeli Hoodie Aquatic oversize seharga Rp299.000.";
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, "_blank");
+        }
+    </script>
+    <footer>
+        <p>&copy; Aquatic All Rights Reserved</p>
+    </footer>
+</body>
+</html>

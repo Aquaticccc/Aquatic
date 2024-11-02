@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQUATIC STORE</title>
+    <link rel="stylesheet" href="testing.css">
+</head>
+<body>
+    <header>
+        <h1>AQUATIC STORE</h1>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="hoodie.html">Hoodie</a></li>
+                <li><a href="Us.html">Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>T-SHIRT AQUATIC STORE!</h2>
+        <p>Temukan berbagai macam baju untuk semua kalangan.</p>
+    </section>
+
+    <section id="produk">
+        <h2>Produk Kami</h2>
+        <div class="produk-item">
+            <img src="WhatsApp Image 2024-10-30 at 17.19.23.jpeg" alt="Baju1" class="Baju1">
+            <a href="Baju Overzie Aquatic One.html" class="satu"; >T-Shirt Overzie Aquatic One </a>
+            <p>Oversize </p>
+            <p>Price: Rp120.000</p>
+            <button class="buy-now-btn" onclick="orderWhatsApp()">Buy Now</button>
+            <script>
+                function orderWhatsApp() {
+                    const phoneNumber = "6282211614257"; // Ganti dengan nomor WhatsApp Anda
+                    const message = "Halo, saya ingin membeli Baju Oversize Aquatic One seharga Rp120.000.";
+                    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                    window.open(url, "_blank");
+                }
+            </script>
+          
+        </div>
+        <div class="produk-item">
+            <img src="WhatsApp Image 2024-10-30 at 19.37.57.jpeg" alt="Baju2" class="Baju2">
+            <a href="Baju Oversize Lost Soul.html" class="satu"; >T-Shirt Oversize Lost Soul</a>
+            <p>Oversize </p>
+            <p>Price: Rp120.000</p>
+            <button class="buy-now-btn" onclick="orderWhatsApp1()">Buy Now</button>
+            <script>
+                function orderWhatsApp1() {
+                    const phoneNumber = "6282211614257"; // Ganti dengan nomor WhatsApp Anda
+                    const message = "Halo, saya ingin membeli Baju Oversize Lost Soul seharga Rp120.000.";
+                    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                    window.open(url, "_blank");
+                }
+            </script>
+        </div>
+        <!-- Tambahkan lebih banyak produk sesuai kebutuhan -->
+    </section>
+    <footer>
+        <p>&copy; Aquatic All Rights Reserved</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,159 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+        font-family: Arial, sans-serif;
+        background-image: url('WhatsApp Image 2024-10-30 at 23.17.54.jpeg');
+        background-size: cover; /* Mengisi seluruh layar */
+        background-position: center; /* Mengatur posisi gambar di tengah */
+        background-attachment: fixed; /* Membuat gambar tetap saat di-scroll */
+        color: #333;
+        text-decoration: none;
+}
+
+.container {
+    width: 90%;       /* Lebar 90% dari layar */
+    max-width: 1200px; /* Lebar maksimum 1200 piksel */
+    margin: 0 auto;  /* Pusatkan kontainer */
+    padding: 20px;   /* Padding di dalam kontainer */
+    box-sizing: border-box; /* Menghitung padding dan border dalam lebar total */
+    background-color: #333;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none; 
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.judul {
+    font-size: 2em;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.bold-text {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.header ul {
+    list-style-type: none;
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+.header ul li {
+    display: inline;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: #f7f7f7;
+}
+
+.header ul li a:hover {
+    text-decoration: underline;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    text-decoration: none;
+
+}
+
+.content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.Penulis {
+    text-align: center;
+    color: #000000;
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.footer1 {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: #555;
+    color: #333;
+    border-radius: 8px;
+}
+
+.copy {
+    font-size: 0.9em;
+}
+
+.Baju3 {
+    width: auto;
+    height: auto;
+}
+
+.p {
+    text-align: center;
+    margin-top: 20px;
+    color: #000000;
+}
+
+.Funclass {
+    margin-top: 10px;
+    color: #000000;
+    text-decoration: none;
+    
+}
+.container3 {
+    width: 90%;               /* Lebar 90% dari layar */
+    max-width: 1200px;       /* Lebar maksimum 1200 piksel */
+    margin: 0 auto;          /* Pusatkan kontainer */
+    padding: 20px;           /* Padding di dalam kontainer */
+    box-sizing: border-box;   /* Menghitung padding dan border dalam lebar total */
+    background-color: #333;
+    text-decoration: none;    /* Warna latar belakang kontainer */
+}
+
+.container3 a {
+    color: white;            /* Mengubah warna teks link menjadi putih */
+    text-decoration: none;   /* Menghapus garis bawah pada link (opsional) */
+}
+
+.container3 a:hover {
+    text-decoration: underline; /* Menambahkan garis bawah saat hover (opsional) */
+}
+
+
+.produk {
+    text-decoration: none; 
+}
+
+.about {
+    color: rgb(0, 0, 0);            /* Mengubah warna teks link menjadi putih */
+    text-decoration: none;   /* Menghapus garis bawah pada link (opsional) */
+}

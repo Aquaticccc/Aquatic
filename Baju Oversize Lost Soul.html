@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk Baju</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Mengatur font untuk keseluruhan halaman */
+            background-color: #333; /* Warna latar belakang halaman */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Mengatur tinggi viewport untuk centering */
+            margin: 0;
+        }
+
+        .product-container {
+            background-color: white; /* Warna latar belakang kontainer produk */
+            border-radius: 8px; /* Membuat sudut kontainer bulat */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan kontainer */
+            padding: 20px; /* Padding di dalam kontainer */
+            text-align: center; /* Mengatur teks menjadi pusat */
+        }
+
+        .product-image {
+            width: 100%; /* Lebar gambar penuh kontainer */
+            max-width: 400px; /* Lebar maksimum gambar */
+            border-radius: 8px; /* Sudut gambar bulat */
+            cursor: pointer; /* Mengubah kursor saat hover */
+        }
+
+        .close-button-hal {
+            background-color: #333; /* Warna latar belakang tombol */
+            color: white; /* Warna teks tombol */
+            border: none; /* Menghapus border tombol */
+            border-radius: 5px; /* Sudut tombol bulat */
+            padding: 10px 20px; /* Padding dalam tombol */
+            font-size: 16px; /* Ukuran font tombol */
+            cursor: pointer; /* Mengubah kursor saat hover */
+            margin-top: 15px; /* Jarak atas tombol */
+            transition: background-color 0.3s; /* Efek transisi untuk warna latar belakang */
+            text-decoration: none; 
+        }
+
+        .buy-now-btn {
+            background-color: #28a745; /* Warna latar belakang tombol */
+            color: white; /* Warna teks tombol */
+            border: none; /* Menghapus border tombol */
+            border-radius: 5px; /* Sudut tombol bulat */
+            padding: 10px 20px; /* Padding dalam tombol */
+            font-size: 16px; /* Ukuran font tombol */
+            cursor: pointer; /* Mengubah kursor saat hover */
+            margin-top: 15px; /* Jarak atas tombol */
+            transition: background-color 0.3s; /* Efek transisi untuk warna latar belakang */
+        }
+
+        .buy-now-btn:hover {
+            background-color: #218838; /* Warna tombol saat hover */
+        }
+
+        /* Modal */
+        .modal {
+            display: none; /* Sembunyikan modal secara default */
+            position: fixed; /* Posisi tetap */
+            z-index: 1000; /* Di atas konten lain */
+            left: 0;
+            top: 0;
+            width: 100%; /* Lebar penuh layar */
+            height: 100%; /* Tinggi penuh layar */
+            overflow: auto; /* Tambahkan scroll jika diperlukan */
+            background-color: rgba(0, 0, 0, 0.8); /* Latar belakang gelap dengan transparansi */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%; /* Lebar gambar dalam modal */
+            max-width: 600px; /* Lebar maksimum gambar dalam modal */
+            border-radius: 8px; /* Sudut gambar bulat */
+        }
+
+        .close-button {
+            position: absolute;
+            top: 20px; /* Jarak dari atas */
+            right: 30px; /* Jarak dari kanan */
+            color: #333; /* Warna tombol close */
+            font-size: 28px; /* Ukuran font tombol close */
+            font-weight: bold; /* Tebal */
+            cursor: pointer; /* Mengubah kursor saat hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="product-container">
+        <h1>T-Shirt Oversize Lost Soul</h1>
+        <img src="WhatsApp Image 2024-10-30 at 19.37.57.jpeg" alt="Baju" class="product-image" id="productImage">
+        <p>Oversize Unisex</p>
+        <p>Material : 16s Cotton combed</p>
+        <p>Color : Request In Chat </p>
+        <p>Available Size : S,M,L,Xl,Xxl</p>
+        <p>Price : Rp.120.000</p>
+        <button class="buy-now-btn" onclick="orderWhatsApp1()">Buy Now</button>
+        <script>
+            function orderWhatsApp1() {
+                const phoneNumber = "6282211614257"; // Ganti dengan nomor WhatsApp Anda
+                const message = "Halo, saya ingin membeli Baju Oversize Lost Soul seharga Rp120.000.";
+                const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(url, "_blank");
+            }
+        </script>
+        <a href="testing.html" class="close-button-hal">Close</a>
+    </div>
+
+    <!-- Modal untuk zoom gambar -->
+    <div id="myModal" class="modal">
+        <span class="close-button" id="closeModal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Mendapatkan elemen modal
+        var modal = document.getElementById("myModal");
+        var img = document.getElementById("productImage");
+        var modalImg = document.getElementById("modalImage");
+        var closeBtn = document.getElementById("closeModal");
+
+        // Ketika gambar di klik, buka modal
+        img.onclick = function() {
+            modal.style.display = "flex"; // Tampilkan modal
+            modalImg.src = this.src; // Set gambar modal dengan sumber gambar yang di klik
+        }
+
+        // Ketika tombol close di klik, tutup modal
+        closeBtn.onclick = function() {
+            modal.style.display = "none"; // Sembunyikan modal
+        }
+
+        // Tutup modal ketika klik di luar gambar
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none"; // Sembunyikan modal
+            }
+        }
+
+        
+
+    </script>
+
+</body>
+</html>
